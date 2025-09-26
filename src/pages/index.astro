@@ -1,81 +1,152 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
-
 <Layout>
-  <div class="flex flex-col lg:flex-row items-center justify-center py-8 md:py-16 px-4 gap-8 md:gap-12 lg:gap-20 min-h-[calc(100vh-200px)]">
-
-    <img 
-      class="hidden md:block w-32 h-32 lg:w-48 lg:h-48 xl:w-56 xl:h-56 border-2 transition duration-500 border-b-blue-100 rounded-full hover:scale-110 object-cover" 
-      src="/yeigen.png" 
+  <div
+    class="flex flex-col lg:flex-row items-center justify-center py-8 md:py-16 px-4 gap-8 md:gap-12 lg:gap-20 min-h-[calc(100vh-200px)]"
+  >
+    <img
+      class="hidden md:block w-32 h-32 lg:w-48 lg:h-48 xl:w-56 xl:h-56 border-2 transition duration-500 border-b-blue-100 rounded-full hover:scale-110 object-cover"
+      src="/yeigen.png"
       alt="Este soy yo"
-    >
-    
-    <div class="relative flex flex-col items-center gap-4 md:gap-6 bg-black/30 backdrop-blur-lg rounded-lg p-6 md:p-8 lg:p-10 shadow-lg shadow-amber-200/50 w-full max-w-md lg:max-w-lg">
-      
+    />
 
-      <img 
-        class="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 absolute -top-6 -left-6 md:-top-8 md:-left-8 object-contain" 
-        src="https://www.pngplay.com/wp-content/uploads/12/Killua-Zoldyck-Transparent-Image.png" 
+    <div
+      class="relative flex flex-col items-center gap-4 md:gap-6 bg-black/30 backdrop-blur-lg rounded-lg p-6 md:p-8 lg:p-10 shadow-lg shadow-amber-200/50 w-full max-w-md lg:max-w-lg"
+    >
+      <img
+        class="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 absolute -top-6 -left-6 md:-top-8 md:-left-8 object-contain"
+        src="https://www.pngplay.com/wp-content/uploads/12/Killua-Zoldyck-Transparent-Image.png"
         alt="killua_sticker"
-      >
-      
-      <img 
-        class="md:hidden w-24 h-24 border-2 transition duration-500 border-b-blue-100 rounded-full hover:scale-110 object-cover mb-4" 
-        src="/yeigen.png" 
+      />
+
+      <img
+        class="md:hidden w-24 h-24 border-2 transition duration-500 border-b-blue-100 rounded-full hover:scale-110 object-cover mb-4"
+        src="/yeigen.png"
         alt="Este soy yo"
+      />
+
+      <h1
+        class="text-2xl md:text-3xl lg:text-4xl font-bold text-shadow-md text-center leading-tight"
       >
-      
-      <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-shadow-md text-center leading-tight">
         Yeigen (Gabriel Martínez)
       </h1>
-      
-      <p class="text-sm md:text-base lg:text-lg text-center text-gray-200 max-w-sm">
+
+      <p
+        class="text-sm md:text-base lg:text-lg text-center text-gray-200 max-w-sm"
+      >
         Me gusta Python, el anime y la programación + la filosofía estoica
       </p>
-      
-      <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-shadow-md text-center mt-2 md:mt-4 text-amber-200">
+
+      <h2
+        class="text-xl md:text-2xl lg:text-3xl font-bold text-shadow-md text-center mt-2 md:mt-4 text-amber-200"
+      >
         La vida es bella
       </h2>
     </div>
 
-    <img 
-      src="/guts_blade.png" 
-      alt="guts_blade" 
+    <img
+      src="/guts_blade.png"
+      alt="guts_blade"
       class="hidden lg:block w-32 h-32 lg:w-48 lg:h-48 xl:w-56 xl:h-56 transition duration-500 hover:scale-110 object-contain"
-    >  
+    />
   </div>
 
-  <div class="grid grid-cols-1 grid-rows-3 md:grid-rows-1 md:grid-cols-3 gap-6 p-4 md:p-6 max-w-6xl mx-auto">
-        <div class="bg-gray-800/50 backdrop-blur-lg rounded-lg p-4 text-center text-sm md:text-base text-gray-300 shadow-lg shadow-amber-200/50">
-          <h3 class="font-bold mb-2">Habilidades</h3>
-          <ul class="list-none list-inside">
-            <li>Python</li>
-            <li>JavaScript</li>
-            <li>HTML & CSS</li>
-            <li>Astro & Tailwind CSS</li>
-            <li>Git & GitHub</li>
-          </ul>
-        </div>
-        <div class="bg-gray-800/50 backdrop-blur-lg rounded-lg p-4 text-center text-sm md:text-base text-gray-300 shadow-lg shadow-amber-200/50">
-          <h3 class="font-bold mb-2">Tecnologías</h3>
-          <ul class="list-inside list-none">
-            <li>FastAPI</li>
-            <li>APIs RESTful</li>
-            <li>Bases de datos SQL (PostgresSQL MySQL )</li>
-            <li>Despliegue en la nube</li>
-            <li>Metodologías ágiles</li>
-          </ul>
-        </div>
-        <div class="bg-gray-800/50 backdrop-blur-lg rounded-lg p-4 text-center text-sm md:text-base text-gray-300 shadow-lg shadow-amber-200/50">
-          <h3 class="font-bold mb-2">Intereses</h3>
-          <ul class="list-inside list-none">
-            <li>Desarrollo web</li>
-            <li>Inteligencia artificial y machine learning</li>
-            <li>Ciberseguridad</li>
-            <li>Filosofía</li>
-            <li>Anime</li>
-          </ul>
-        </div>
+  <div class="grid grid-cols-1 grid-rows-3 md:grid-rows-1 md:grid-cols-3 gap-6 p-4 md:p-6 max-w-6xl mx-auto  transition duration-500 hover:scale-110">
+    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700  transition duration-500 hover:scale-110">
+      <div class="p-5 items-center text-center">
+        <a href="/about"><h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Sobre mi</h5></a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-center">
+          Soy Gabriel Martínez, apasionado por Python, el anime y la filosofía estoica.
+        </p>
+        
+        <a href="/about" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-amber-500 rounded-lg hover:bg-amber-600 focus:ring-4 focus:outline-none focus:ring-amber-300 dark:bg-amber-400 dark:hover:bg-amber-500 dark:focus:ring-amber-800">
+          Ver más
+          <svg
+            class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10">
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+          </svg>
+        </a>
       </div>
+    </div>
+    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 transition duration-500 hover:scale-110">
+      <div class="p-5">
+        <a href="/projects">
+          <h5
+            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            Proyectos
+          </h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+          Explora mis proyectos y trabajos realizados en desarrollo de software.
+        </p>
+        <a
+          href="/projects"
+          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-amber-500 rounded-lg hover:bg-amber-600 focus:ring-4 focus:outline-none focus:ring-amber-300 dark:bg-amber-400 dark:hover:bg-amber-500 dark:focus:ring-amber-800"
+        >
+          Ver proyectos
+          <svg
+            class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+            </svg>
+          </a>
+      </div>
+    </div>
+    <div
+      class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 transition duration-500 hover:scale-110"
+    >
+      <div class="p-5">
+        <a href="/contact">
+          <h5
+            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            Contacto
+          </h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+          Ponte en contacto conmigo para colaboraciones o consultas.
+        </p>
+        <a
+          href="/contact"
+          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-amber-500 rounded-lg hover:bg-amber-600 focus:ring-4 focus:outline-none focus:ring-amber-300 dark:bg-amber-400 dark:hover:bg-amber-500 dark:focus:ring-amber-800"
+        >
+          Contactar
+          <svg
+            class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+            </svg>
+          </a>
+      </div>
+    </div>
+  </div>
 </Layout>
