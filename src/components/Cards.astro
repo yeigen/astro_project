@@ -3,7 +3,7 @@ import NavCard from "./NavCard.astro";
 import { navCards } from "../data/sections";
 ---
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 max-w-6xl mx-auto transition-transform duration-200 hover:scale-105">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 max-w-6xl mx-auto justify-items-center transition-transform duration-200 hover:scale-105">
   {navCards.map((c) => (
     <NavCard href={c.href} title={c.title}>
       {c.list ? (
