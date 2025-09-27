@@ -1,5 +1,4 @@
 ---
-// src/layouts/Layout.astro
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
@@ -17,7 +16,8 @@ const { title = "Portfolio — Gabriel Martínez", description = "Ingeniero de D
     <title>{title}</title>
     <meta name="description" content={description} />
   </head>
-  <body class="min-h-screen text-gray-100">
+
+  <body class="min-h-screen text-gray-100 bg-black justify-center sm:items-center">
     <a href="#contenido" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 bg-black/70 px-3 py-2 rounded">
       Saltar al contenido
     </a>

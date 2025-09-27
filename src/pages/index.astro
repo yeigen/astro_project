@@ -3,17 +3,17 @@ import Layout from "../layouts/Layout.astro";
 import Cards from "../components/Cards.astro";
 import About from "../components/About.astro";
 import { about } from "../data/about";
+import  Carrusel from "../components/Carrusel.astro";
 
 const pageTitle = "Portfolio — Gabriel Martínez";
 const pageDescription = "Desarrollador. Proyectos, habilidades y formas de contacto.";
 ---
----
 
 <Layout title={pageTitle} description={pageDescription}>
 <div class="flex flex-col lg:flex-row items-center justify-center gap-8 md:gap-12 lg:gap-20 px-4 py-12">
-  <div class="flex flex-col items-center">
+  <div class="flex flex-col items-center justify-items-center">
     <img
-      class="hidden md:block w-32 h-32 lg:w-48 lg:h-48 border-2 border-b-blue-100 rounded-full object-cover transition-transform duration-300 hover:scale-105"
+      class="md:block w-32 h-32 lg:w-48 lg:h-48 border-2 border-b-blue-100 rounded-full object-cover transition-transform duration-300 hover:scale-105"
       src="/yeigen.png"
       alt="Foto de Gabriel Martínez"
       loading="lazy"
@@ -46,12 +46,14 @@ const pageDescription = "Desarrollador. Proyectos, habilidades y formas de conta
     <img
       src="/guts_blade.png"
       alt="Ilustración temática"
-      class="hidden lg:block w-48 h-48 object-contain transition-transform duration-300 hover:scale-105"
+      class="lg:block w-48 h-48 object-contain transition-transform duration-300 hover:scale-105"
       loading="lazy"
     />
   </div>
   <Cards />
 
   <About />
+
+  <Carrusel />
 
 </Layout>
