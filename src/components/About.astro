@@ -1,11 +1,33 @@
+---
+// src/components/About.astro
+import Section from "./Section.astro";
+import { about } from "../data/about";
 
-<section class="flex flex-col items-center gap-2 p-4 w-full">
-  <h2 id="sobre-mi" class="text-2xl md:text-3xl lg:text-4xl font-bold text-shadow-md text-center mt-2 md:mt-4 text-amber-200">Sobre mí</h2>
-    <div class="w-full md:w-4/5 lg:w-3/4 max-w-5xl mx-auto flex justify-center items-center gap-20 p-6 bg-black/30 border border-white shadow-lg shadow-amber-300 rounded-lg">
-      <img
-        class="w-32 h-32 lg:w-48 lg:h-48 xl:w-56 xl:h-56 border-2 transition duration-500 border-b-blue-100 rounded-full hover:scale-110 object-cover"
-        src="/yeigen.png"
-        alt="Este soy yo"/>
-      <p class="font-normal text-white"> HOLA ME LLAMO YEIGEN</p>
+const icons = [
+  ...about.url_images_programming,
+  ...about.url_images_social.filter(i => i.title === "GitHub"),
+];
+---
+<Section id={about.id} title={about.title}>
+  <div class="mx-auto flex flex-col md:flex-row items-center gap-8 p-6 bg-black/30 border border-white/20 shadow-lg rounded-lg">
+    <img
+      class="w-40 h-40 md:w-60 md:h-90 border-2 border-b-blue-100 object-contain aspect-ratio-1"
+      src="/my_face.jpeg"
+      alt="Foto de Gabriel Martínez"
+      loading="lazy"/>
+    
+      <div>
+        <p class="text-white/90 leading-relaxed">{about.content}<a href="https://abodiapp.com/" target="_blank" rel="noopener noreferrer" class="text-amber-200 underline hover:no-underline font-semibold">Abodi</a>.</p>
+        <h2 class="mt-10 text-center">{about.skills_title}</h2>
+
+        <div class="mt-4 flex flex-wrap justify-center items-center gap-4">
+          {icons.map((icon) => (
+          <figure class="flex flex-col items-center">
+            <img class="w-16 h-16 m-2 rounded-full hover:scale-110 transition-transform bg-gray-300/30" src={icon.src} alt={`Logo de ${icon.title}`} loading="lazy" />
+            <figcaption class="text-sm text-center mt-2 text-gray-200">{icon.title}</figcaption>
+          </figure>
+    ))}
+      </div>
     </div>
-</section>
+  </div>
+</Section>

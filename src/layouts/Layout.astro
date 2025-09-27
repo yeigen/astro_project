@@ -1,34 +1,32 @@
 ---
+// src/layouts/Layout.astro
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import Cards from "../components/Cards.astro";
-import About from "../components/About.astro";
-import Projects from "../components/Projects.astro";
-import Contact from "../components/Contact.astro";
-import { ClientRouter } from 'astro:transitions';
 import "../styles/global.css";
+
+const { title = "Portfolio — Gabriel Martínez", description = "Ingeniero de Datos e IA que le gusta programar y el desarrollo de aplicaciones" } = Astro.props;
 ---
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" href="/favicon.ico" />
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
-		<meta name="generator" content={Astro.generator} />
-		<title>Portfolio Yeigen - Gabriel Martínez</title>
-	</head>
-
-	<body class="bg-[url(https://4kwallpapers.com/images/wallpapers/zenitsu-agatsuma-3840x2160-19143.jpg)] bg-cover bg-center bg-no-repeat text-gray-100">
-    <ClientRouter/>
-    <main class="bg-gray-900/50 min-h-screen backdrop-opacity-70 flex flex-col">
-      <Header/>
-      <div class="flex-1 px-4 md:px-6">
-        <slot/>
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body class="min-h-screen text-gray-100">
+    <a href="#contenido" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 bg-black/70 px-3 py-2 rounded">
+      Saltar al contenido
+    </a>
+    <Header />
+    <main id="contenido" class="from-black/90 to-black bg-gradient-to-b bg-cover bg-center bg-no-repeat">
+      <div class="min-h-screen">
+        <slot />
       </div>
-        <Cards/>
-        <About/>
-        <Footer/>
     </main>
-	</body>
+    <Footer />
+  </body>
 </html>

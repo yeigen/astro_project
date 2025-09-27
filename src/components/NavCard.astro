@@ -1,0 +1,16 @@
+---
+const { href = "#", title } = Astro.props;
+---
+<a 
+  href={href} 
+  class="
+  block max-w-sm w-full p-6 
+  border rounded-lg shadow-sm 
+  hover:shadow-md hover:shadow-amber-200/50
+  transition-transform duration-500 hover:scale-110">
+
+  <h3 class="mb-2 text-2xl font-bold tracking-tight text-white">{title}</h3>
+  <div class="text-gray-300">
+    <slot />
+  </div>
+</a>
