@@ -10,21 +10,23 @@ const icons = [
 ---
 
 <Section id={about.id} title={about.title}>
-  <div class="mx-auto flex flex-col md:flex-row items-center justify-items-center gap-8 p-6 bg-black/30 border border-white/20 shadow-lg rounded-lg">
+  <div class="mx-auto flex flex-col md:flex-row items-center md:items-start justify-items-center gap-8 p-6 sm:p-8 bg-black/30 border border-white/20 shadow-lg rounded-lg w-full">
     <img
-      class="w-40 h-40 md:w-60 md:h-90 border-2 border-b-blue-100 object-contain aspect-ratio-1"
+      class="w-40 h-40 md:w-60 md:h-90 border-2 border-b-blue-100 object-contain aspect-ratio-1 animate-in fade-in slide-in-from-left-1 duration-300 delay-150 ease-out transition-transform hover:scale-105 mx-auto md:mx-0"
       src="/my_face.jpeg"
       alt="Foto de Gabriel Martínez"
-      loading="lazy"/>
+      loading="lazy"
+      transition:name="about-pic"
+    />
     
-      <div>
-        <p class="text-white/90 leading-relaxed">{about.content}<a href="https://abodiapp.com/" target="_blank" rel="noopener noreferrer" class="text-amber-200 underline hover:no-underline font-semibold">Abodi</a>.</p>
-        <h2 class="mt-10 text-center">{about.skills_title}</h2>
+      <div class="animate-in fade-in slide-in-from-bottom-1 duration-400 delay-200 w-full md:max-w-2xl">
+        <p class="text-center md:text-left text-white/90 leading-relaxed">{about.content}<a href="https://abodiapp.com/" target="_blank" rel="noopener noreferrer" class="text-amber-200 underline hover:no-underline font-semibold transition-all duration-300 hover:scale-105 inline-block hover:-translate-y-0.5">Abodi</a>.</p>
+        <h2 class="mt-10 text-center md:text-left animate-in fade-in duration-400 delay-300">{about.skills_title}</h2>
 
-        <div class="mt-4 flex flex-wrap justify-center items-center gap-4">
-          {icons.map((icon) => (
-          <figure class="flex flex-col items-center">
-            <img class="w-16 h-16 m-2 rounded-full hover:scale-110 transition-transform bg-gray-300/30" src={icon.src} alt={`Logo de ${icon.title}`} loading="lazy" />
+        <div class="mt-4 flex flex-wrap justify-center md:justify-start items-center gap-4">
+          {icons.map((icon, index) => (
+          <figure class={`flex flex-col items-center animate-in fade-in zoom-in-95 duration-300 ${["delay-100","delay-200","delay-300","delay-400","delay-500"][index % 5]}`}>
+            <img class="w-16 h-16 m-2 rounded-full hover:scale-110 transition-transform duration-300 bg-gray-300/30" src={icon.src} alt={`Logo de ${icon.title}`} loading="lazy" />
             <figcaption class="text-sm text-center mt-2 text-gray-200">{icon.title}</figcaption>
           </figure>
     ))}

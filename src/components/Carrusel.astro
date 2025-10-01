@@ -1,52 +1,148 @@
-<!-- Me copie este codigo estaba muy buena, la verdad -->
+<!-- Carrusel de proyectos, combina texto y slider horizontal -->
 
-<div class="max-w-7xl mx-auto px-4 py-8">
-  <div class="relative">
-    <div class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth w-full" role="region" aria-roledescription="carrusel" aria-label="Galería de obras">
-      <section id="s1" class="min-w-full shrink-0 snap-center h-[400px] relative flex items-center justify-center">
-        <img src="http://www.bcu.ac.uk/mediaitem/visual-communication-illustration-02-130585258441045504.jpg?quality=90" alt="Ilustración" class="block w-3/5 mx-auto max-h-full object-contain z-0">
-        <div class="absolute inset-0 bg-black/30 pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-4 text-white text-center z-20">
-          <h3 class="text-xl font-bold">Gusti Ilustración</h3>
-          <p class="text-base">Exposición</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center justify-between text-center mt-4 mb-10 px-4 sm:px-6 lg:px-8 animate-in fade-in duration-400">
+  <div class="space-y-4 animate-in fade-in slide-in-from-left-1 duration-400">
+    <h2 class="text-3xl font-bold">Proyectos que he realizado y que realizaré</h2>
+    <p class="text-lg">Aquí hay algunos de mis proyectos favoritos en los que he trabajado.</p>
+  </div>
+
+  <div class="w-full px-2 sm:px-4 py-6 sm:py-8 animate-in fade-in slide-in-from-right-1 duration-400 delay-150" data-carousel>
+    <div
+      class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth w-full"
+      role="region"
+      aria-roledescription="carrusel"
+      aria-label="Galería de obras"
+      data-carousel-track
+    >
+      <section id="s1" class="min-w-full shrink-0 snap-center h-[320px] sm:h-[360px] md:h-[400px] relative flex items-center justify-center">
+        <div class="w-full h-full flex items-center justify-center">
+          <img
+            src="/Abodi_image.png"
+            alt="Ilustración"
+            class="mx-auto max-w-xs md:max-w-sm lg:max-w-md max-h-full object-contain animate-in fade-in zoom-in-95 duration-300 delay-150 ease-out transition-transform hover:scale-105"
+          />
         </div>
-        <a href="#s3" class="absolute top-1/2 -translate-y-1/2 left-4 p-3 rounded-full bg-black/50 text-white hover:bg-black/70 z-20 flex items-center justify-center" aria-label="Anterior">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-        </a>
-        <a href="#s2" class="absolute top-1/2 -translate-y-1/2 right-4 p-3 rounded-full bg-black/50 text-white hover:bg-black/70 z-20 flex items-center justify-center" aria-label="Siguiente">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-        </a>
+        <div class="absolute inset-0 bg-black/30 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-4 text-white text-center z-10">
+          <h3 class="text-xl font-bold">Abodi</h3>
+          <p class="text-base">Aplicación para que los abogados tengan sus procesos en un solo lugar</p>
+        </div>
+        <button
+          type="button"
+          class="absolute top-1/2 -translate-y-1/2 left-4 p-3 rounded-full bg-black/50 text-white hover:bg-black/70 z-10 flex items-center justify-center transition-colors"
+          aria-label="Anterior"
+          data-carousel-prev
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button
+          type="button"
+          class="absolute top-1/2 -translate-y-1/2 right-4 p-3 rounded-full bg-black/50 text-white hover:bg-black/70 z-10 flex items-center justify-center transition-colors"
+          aria-label="Siguiente"
+          data-carousel-next
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
       </section>
 
-      <section id="s2" class="min-w-full shrink-0 snap-center h-[400px] relative flex items-center justify-center">
-        <img src="https://ugc.kn3.net/i/origin/http://thisiscolossal.com/wp-content/uploads/2011/02/anthony-2-600x424.jpg" alt="Fotografía" class="block w-3/5 mx-auto max-h-full object-contain z-0">
-        <div class="absolute inset-0 bg-black/30 pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-4 text-white text-center z-20">
-          <h3 class="text-xl font-bold">Xataka Fotografía</h3>
-          <p class="text-base">Concurso</p>
+      <section id="s2" class="min-w-full shrink-0 snap-center h-[320px] sm:h-[360px] md:h-[400px] relative flex items-center justify-center">
+        <div class="w-full h-full flex items-center justify-center">
+          <img
+            src="/abodi_bot.png"
+            alt="Fotografía"
+            class="mx-auto max-w-xs md:max-w-sm lg:max-w-md max-h-full object-contain animate-in fade-in zoom-in-95 duration-300 delay-150 ease-out transition-transform hover:scale-105"
+          />
         </div>
-        <a href="#s1" class="absolute top-1/2 -translate-y-1/2 left-4 p-3 rounded-full bg-black/50 text-white hover:bg-black/70 z-20 flex items-center justify-center" aria-label="Anterior">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-        </a>
-        <a href="#s3" class="absolute top-1/2 -translate-y-1/2 right-4 p-3 rounded-full bg-black/50 text-white hover:bg-black/70 z-20 flex items-center justify-center" aria-label="Siguiente">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-        </a>
+        <div class="absolute inset-0 bg-black/30 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-4 text-white text-center z-10">
+          <h3 class="text-xl font-bold">Abodi-Bot (Próximamente)</h3>
+          <p class="text-base">Un bot que ayuda a los abogados a gestionar sus procesos</p>
+        </div>
+        <button
+          type="button"
+          class="absolute top-1/2 -translate-y-1/2 left-4 p-3 rounded-full bg-black/50 text-white hover:bg-black/70 z-10 flex items-center justify-center transition-colors"
+          aria-label="Anterior"
+          data-carousel-prev
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button
+          type="button"
+          class="absolute top-1/2 -translate-y-1/2 right-4 p-3 rounded-full bg-black/50 text-white hover:bg-black/70 z-10 flex items-center justify-center transition-colors"
+          aria-label="Siguiente"
+          data-carousel-next
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
       </section>
 
-      <section id="s3" class="min-w-full shrink-0 snap-center h-[400px] relative flex items-center justify-center">
-        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/e86e8b59124321.5a15e4ccd8622.jpg" alt="Pintura" class="block w-3/5 mx-auto max-h-full object-contain z-0">
-        <div class="absolute inset-0 bg-black/30 pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-4 text-white text-center z-20">
-          <h3 class="text-xl font-bold">DoArt Pintura</h3>
-          <p class="text-base">Curso</p>
+      <section id="s3" class="min-w-full shrink-0 snap-center h-[320px] sm:h-[360px] md:h-[400px] relative flex items-center justify-center">
+        <div class="w-full h-full flex items-center justify-center">
+          <img
+            src="/portada_yeigen.png"
+            alt="Pintura"
+            class="mx-auto max-w-xs md:max-w-sm lg:max-w-md max-h-full object-contain animate-in fade-in zoom-in-95 duration-300 delay-150 ease-out transition-transform hover:scale-105"
+          />
         </div>
-        <a href="#s2" class="absolute top-1/2 -translate-y-1/2 left-4 p-3 rounded-full bg-black/50 text-white hover:bg-black/70 z-20 flex items-center justify-center" aria-label="Anterior">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-        </a>
-        <a href="#s1" class="absolute top-1/2 -translate-y-1/2 right-4 p-3 rounded-full bg-black/50 text-white hover:bg-black/70 z-20 flex items-center justify-center" aria-label="Siguiente">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-        </a>
+        <div class="absolute inset-0 bg-black/30 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-4 text-white text-center z-10">
+          <h3 class="text-xl font-bold">Mi portafolio</h3>
+          <p class="text-base">Puede ser o no considerado un proyecto, pero lo hice con mucho cariño</p>
+        </div>
+        <button
+          type="button"
+          class="absolute top-1/2 -translate-y-1/2 left-4 p-3 rounded-full bg-black/50 text-white hover:bg-black/70 z-10 flex items-center justify-center transition-colors"
+          aria-label="Anterior"
+          data-carousel-prev
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button
+          type="button"
+          class="absolute top-1/2 -translate-y-1/2 right-4 p-3 rounded-full bg-black/50 text-white hover:bg-black/70 z-10 flex items-center justify-center transition-colors"
+          aria-label="Siguiente"
+          data-carousel-next
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
       </section>
     </div>
   </div>
+
+  <div class="w-full h-1 bg-amber-200 md:col-span-2"></div>
 </div>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+      const track = carousel.querySelector('[data-carousel-track]');
+      if (!track) return;
+
+      const scrollByAmount = () => track.clientWidth;
+
+      const scroll = (direction) => {
+        track.scrollBy({ left: scrollByAmount() * direction, behavior: 'smooth' });
+      };
+
+      carousel.querySelectorAll('[data-carousel-prev]').forEach((button) => {
+        button.addEventListener('click', () => scroll(-1));
+      });
+
+      carousel.querySelectorAll('[data-carousel-next]').forEach((button) => {
+        button.addEventListener('click', () => scroll(1));
+      });
+    });
+  });
+</script>

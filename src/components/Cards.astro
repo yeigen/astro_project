@@ -3,16 +3,18 @@ import NavCard from "./NavCard.astro";
 import { navCards } from "../data/sections";
 ---
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 max-w-6xl mx-auto justify-items-center transition-transform duration-200 hover:scale-105">
-  {navCards.map((c) => (
-    <NavCard href={c.href} title={c.title}>
-      {c.list ? (
-        <ul class="list-disc ml-5 space-y-1">
-          {c.list.map((item) => <li>{item}</li>)}
-        </ul>
-      ) : (
-        <p>{c.content}</p>
-      )}
-    </NavCard>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6 sm:p-8 max-w-6xl mx-auto justify-items-center">
+  {navCards.map((c, index) => (
+    <div class={`animate-in fade-in slide-in-from-bottom-1 duration-400 ${["delay-100","delay-200","delay-300","delay-400","delay-500"][index] ?? "delay-100"}`}>
+      <NavCard href={c.href} title={c.title}>
+        {c.list ? (
+          <ul class="list-disc ml-5 space-y-1">
+            {c.list.map((item) => <li>{item}</li>)}
+          </ul>
+        ) : (
+          <p>{c.content}</p>
+        )}
+      </NavCard>
+    </div>
   ))}
 </div>

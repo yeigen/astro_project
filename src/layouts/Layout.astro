@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
+import { ClientRouter } from 'astro:transitions';
 
 const { title = "Portfolio — Gabriel Martínez", description = "Ingeniero de Datos e IA que le gusta programar y el desarrollo de aplicaciones" } = Astro.props;
 ---
@@ -15,18 +16,60 @@ const { title = "Portfolio — Gabriel Martínez", description = "Ingeniero de D
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
     <title>{title}</title>
     <meta name="description" content={description} />
+    <ClientRouter />
   </head>
 
-  <body class="min-h-screen text-gray-100 bg-black justify-center sm:items-center">
-    <a href="#contenido" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 bg-black/70 px-3 py-2 rounded">
-      Saltar al contenido
-    </a>
+  <body class="text-white bg-black animate-in fade-in duration-300 ease-out">
     <Header />
-    <main id="contenido" class="from-black/90 to-black bg-gradient-to-b bg-cover bg-center bg-no-repeat">
+    <main id="contenido" class="from-black/90 to-black bg-gradient-to-b bg-cover bg-center bg-no-repeat animate-in fade-in duration-300 ease-out">
       <div class="min-h-screen">
         <slot />
       </div>
     </main>
     <Footer />
+
+    <script>
+      // Intersection Observer para animaciones al hacer scroll
+      document.addEventListener('astro:page-load', () => {
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, observerOptions);
+
+        // Observar secciones para animaciones
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+          observer.observe(section);
+        });
+      });
+
+      // Smooth scroll mejorado para enlaces internos
+      document.addEventListener('astro:page-load', () => {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', (e) => {
+            const target = anchor as HTMLAnchorElement;
+            const href = target.getAttribute('href');
+            if (href && href !== '#') {
+              e.preventDefault();
+              const element = document.querySelector(href);
+              if (element) {
+                element.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'start'
+                });
+              }
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
